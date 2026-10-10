@@ -1,219 +1,562 @@
 <!DOCTYPE html>
-<html></html>
-</head>
+<html lang="id">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio - Vina Hidayatul Ulyah</title>
+    <title>Portfolio - Vina Hidayatul Ulyah</title>
+
     <style>
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    background-color: #ffe4ec;
-    color: #9c4765;
-    line-height: 1.7;
-    padding: 20px;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-header {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #ffd1df;
-    border: 2px solid #f7b8cc;
-    border-radius: 20px;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff5fa;
+            color: #b83f7c;
+            line-height: 1.7;
+        }
 
-header h1 {
-    font-size: 2.5rem;
-    color: #c94f7c;
-}
+        a {
+            text-decoration: none;
+        }
 
-header p {
-    color: #a64d70;
-    margin-top: 10px;
-}
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
 
-.profile-photo {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #f7a9c4;
-    margin-bottom: 15px;
-}
+        /* NAVIGATION */
+        header {
+            background: #ffe0ef;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 3px 15px #f5c5dc;
+        }
 
-nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 20px;
-}
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 18px 0;
+        }
 
-nav a {
-    background-color: #fff0f5;
-    color: #c94f7c;
-    padding: 8px 15px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: bold;
-}
+        .logo {
+            color: #d63384;
+            font-size: 22px;
+            font-weight: bold;
+        }
 
-nav a:hover {
-    background-color: #f4a6c1;
-    color: white;
-}
+        .nav-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
 
-section {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 25px;
-    background-color: #fff0f5;
-    border: 2px solid #f7c1d2;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(201, 79, 124, 0.1);
-}
+        .nav-links a {
+            color: #c13f80;
+            padding: 8px 12px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
 
-h2 {
-    color: #c94f7c;
-    margin-bottom: 15px;
-    border-bottom: 3px solid #f4a6c1;
-    display: inline-block;
-    padding-bottom: 5px;
-}
+        .nav-links a:hover {
+            background: #f6a8cf;
+            color: white;
+        }
 
-ul {
-    list-style-type: square;
-    padding-left: 20px;
-}
+        /* GENERAL SECTION */
+        section {
+            padding: 60px 0;
+            scroll-margin-top: 90px;
+        }
 
-li {
-    margin-bottom: 8px;
-}
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            color: #d63384;
+            margin-bottom: 30px;
+        }
 
-.contact-links a {
-    display: inline-block;
-    margin: 8px 10px 8px 0;
-    padding: 10px 18px;
-    background-color: #ffd1df;
-    color: #b83f70;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 20px;
-}
+        /* HOME */
+        .hero {
+            padding-top: 45px;
+        }
 
-.contact-links a:hover {
-    background-color: #e986a8;
-    color: white;
-}
+        .hero-card {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 35px;
+            background: linear-gradient(135deg, #ffd6e9, #fff0f7);
+            border: 2px solid #ffc2df;
+            border-radius: 30px;
+            box-shadow: 0 8px 25px #f5c5dc;
+        }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    color: #b65b7c;
-    background-color: #ffd1df;
-    border: 1px solid #f7b8cc;
-    border-radius: 15px;
-    font-size: 0.9rem;
-    margin-top: 30px;
-}
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid white;
+            box-shadow: 0 5px 15px #e9a1c5;
+        }
 
-@media (max-width: 600px) {
-    body {
-        padding: 12px;
-    }
+        .hero-text {
+            flex: 1;
+        }
 
-    header h1 {
-        font-size: 1.8rem;
-    }
+        .hero-text h1 {
+            font-size: 36px;
+            color: #d63384;
+            margin: 8px 0;
+        }
 
-    nav {
-        gap: 10px;
-    }
+        .hero-text p {
+            color: #bd5c8c;
+        }
 
-    section {
-        padding: 18px;
-    }
-}
+        .subtitle {
+            color: #e0529b;
+            font-weight: bold;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #f08abb;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 25px;
+            margin-top: 15px;
+        }
+
+        /* ABOUT ME */
+        .about-card {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 25px;
+            align-items: center;
+            background: #ffe5f1;
+            padding: 30px;
+            border: 2px solid #ffc2df;
+            border-radius: 25px;
+            box-shadow: 0 8px 25px #f5c5dc;
+        }
+
+        .about-image {
+            background: #ffd1e6;
+            min-height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            font-size: 75px;
+        }
+
+        .about-content h3 {
+            margin-bottom: 10px;
+            color: #d63384;
+        }
+
+        .about-content p {
+            margin-bottom: 10px;
+            color: #bd5c8c;
+        }
+
+        /* SKILLS */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: #ffe5f1;
+            padding: 25px;
+            border: 2px solid #ffc2df;
+            border-radius: 22px;
+            text-align: center;
+            box-shadow: 0 6px 18px #f5c5dc;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover,
+        .experience-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .skill-card h3 {
+            color: #d63384;
+            margin-bottom: 8px;
+        }
+
+        .skill-card p {
+            color: #bd5c8c;
+        }
+
+        /* EXPERIENCE */
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .experience-card {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+            background: #ffe5f1;
+            padding: 25px;
+            border: 2px solid #ffc2df;
+            border-radius: 22px;
+            box-shadow: 0 6px 18px #f5c5dc;
+            transition: 0.3s;
+        }
+
+        .experience-icon {
+            font-size: 35px;
+        }
+
+        .experience-card h3 {
+            color: #d63384;
+            margin-bottom: 5px;
+        }
+
+        .experience-card p {
+            color: #bd5c8c;
+        }
+
+        /* CONTACT */
+        .contact-card {
+            background: #ffe5f1;
+            padding: 35px 25px;
+            border: 2px solid #ffc2df;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 8px 25px #f5c5dc;
+        }
+
+        .contact-card p {
+            color: #bd5c8c;
+            margin-bottom: 20px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .contact-links a {
+            display: inline-block;
+            background: #ed78b2;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .contact-links a:hover {
+            background: #d63384;
+            transform: translateY(-3px);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            background: #ffd6e9;
+            color: #bd5c8c;
+            padding: 22px;
+            margin-top: 30px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav {
+                justify-content: center;
+            }
+
+            .nav-links {
+                justify-content: center;
+            }
+
+            .hero-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 25px;
+            }
+
+            .hero-text h1 {
+                font-size: 28px;
+            }
+
+            .about-card {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-pic {
+                width: 145px;
+                height: 145px;
+            }
+
+            .section-title {
+                font-size: 25px;
+            }
+
+            .nav-links a {
+                padding: 7px 9px;
+                font-size: 13px;
+            }
+        }
     </style>
-    </head>
-    <body>
+</head>
 
-    <!-- Header / Navigasi -->
+<body>
+
+    <!-- NAVIGATION -->
     <header>
-    <img src="profil vina.jpeg" alt="Foto Profil Vina" class="profile-photo">
+        <nav class="container">
+            <a href="#home" class="logo">Vina's Portfolio</a>
 
-    <h1>Vina Hidayatul Ulyah</h1>
-    <p>Mahasiswa Pendidikan Teknologi Informasi</p>
-            <a href="#about">About Me</a>
-            <a href="#skills">What I Can Do</a>
-            <a href="#achievements">Achievements</a>
-            <a href="#contact">Contact</a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About Me</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
         </nav>
     </header>
 
-    <!-- Section 1: About Me -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p><strong>Nama:</strong> Vina Hidayatul Ulyah</p>
-        <p><strong>NIM:</strong> 26050974003</p>
-        <p><strong>Program Studi:</strong> S1 Pendidikan Teknologi Informasi</p>
-        <br>
-        <p>Saya adalah mahasiswa Pendidikan Teknologi Informasi yang memiliki
-    minat dalam bidang teknologi, pendidikan, dan pengembangan keterampilan
-    digital. Saya senang mempelajari hal-hal baru, mengembangkan kemampuan,
-    serta mencoba berbagai pengalaman. Saya bercita-cita menjadi Guru
-    Informatika yang kreatif, inspiratif, dan mampu membantu peserta didik
-    memahami teknologi dengan cara yang menarik dan mudah dipahami.</p>
-    </section>
+    <main>
 
-    <!-- Section 2: What I Can Do (Skills) -->
-    <section id="skills">
-        <h2>What I Can Do</h2>
-        <p>Kemampuan dan tools yang saya kuasai saat ini:</p>
-        <ul>
-            <li>HTML5 & CSS3</li>
-            <li>Anaconda</li>
-            <li>Visual Studio Code</li>
-            <li>Git & GitHub</li>
-            <li>MySQL</li>
-            <li>Prompt Engineering (ChatGPT, Claude, Gemini, AI Studio)</li>
-            <li>Kerja Sama Tim dan Komunikasi</li>
-        </ul>
-    </section>
+        <!-- HOME -->
+        <section id="home" class="hero container">
+            <div class="hero-card">
 
-    <!-- Section 3: Achievements -->
-    <section id="achievements">
-        <h2>Achievements</h2>
-        <ul>
-            <li><strong>Peserta Ameliorer (2026)</strong> - Mengikuti pelatihan dasar dan pengembangan portofolio web.</li>
-            <li><strong>Bendahara OSIS</strong> - Memiliki pengalaman dalam
-            pengelolaan keuangan dan pencatatan kegiatan organisasi.</li>
-             <li><strong>Anggota Ekstrakurikuler Paskibra</strong> - Mengembangkan
-            kedisiplinan, tanggung jawab, dan kerja sama tim.</li>
-            <li><strong>Pengurus Kelas</strong> - Berpartisipasi dalam membantu
-             koordinasi kegiatan dan komunikasi di kelas.</li>
-</ul>
-    </section>
+                <img
+                    src="profil vina.jpeg"
+                    alt="Foto profil Vina Hidayatul Ulyah"
+                    class="profile-pic"
+                >
 
-    <!-- Section 4: Contact -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Hubungi atau lihat portofolio lengkap saya melalui tautan berikut:</p>
-        <br>
-        <div class="contact-links">
-            <a href="mailto:vinaulyah258@gmail.com" target="_blank">Email</a>
-            <a href="https://github.com/26050974003-lgtm/portofolio-vina.git" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/vina-ulyah-a53253441/" target="_blank">LinkedIn</a>
-        </div>
-    </section>
+                <div class="hero-text">WELCOME TO MY PORTOFOLIO</p>
+
+                    <h1>Hi, I'm Vina Hidayatul Ulyah</h1>
+
+                    <p>
+                        Mahasiswa S1 Pendidikan Teknologi Informasi
+                        yang tertarik pada teknologi, pendidikan,
+                        dan inovasi digital.
+                    </p>
+
+                    <p>
+                        Saya bercita-cita menjadi Guru Informatika
+                        yang kreatif, inspiratif, dan mampu membantu
+                        siswa memahami teknologi.
+                    </p>
+
+                    <span class="badge">Future Informatics Teacher</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT ME -->
+        <section id="about" class="container">
+            <h2 class="section-title">About Me</h2>
+
+            <div class="about-card">
+
+                <div class="about-image">
+                    🎓💻
+                </div>
+
+                <div class="about-content">
+                    <h3>Who Am I?</h3>
+                    <p><strong>Nama:</strong> Vina Hidayatul Ulyah</p>
+                    <p><strong>NIM:</strong> 26050974003</p>
+                    <p><strong>Program Studi:</strong> Pendidikan Teknologi Informasi</p>
+                    <p>
+                        Halo! Nama saya Vina Hidayatul Ulyah,
+                        mahasiswa S1 Pendidikan Teknologi Informasi.
+                    </p>
+
+                    <p>
+                        Saya memiliki minat pada teknologi, pendidikan,
+                        dan pengembangan keterampilan digital. Saya senang mempelajari hal baru, mencoba
+                        pengalaman baru, serta bekerja sama dalam tim.
+                    </p>
+
+                    
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="container">
+            <h2 class="section-title">What I Can Do</h2>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3>Anaconda</h3>
+                    <p>Belajar Pemrograman Python.</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>Visual Studio Code</h3>
+                    <p>Menggunakan editor kode untuk belajar pemrograman.</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🐙</div>
+                    <h3>Git &amp; GitHub</h3>
+                    <p>Mengelola kode dan mempublikasikan website.</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>MySQL</h3>
+                    <p>Mempelajari pengelolaan dan penyimpanan data.</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🤖</div>
+                    <h3>Prompt Engineering</h3>
+                    <p>Menggunakan ChatGPT, Claude, Gemini, dan AI Studio untuk belajar.</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🤝</div>
+                    <h3>Kerja Sama Tim</h3>
+                    <p>Mampu berkomunikasi dan bekerja sama dalam tim.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience" class="container">
+            <h2 class="section-title">Experience &amp; Achievements</h2>
+                <div class="experience-card">
+                    <div class="experience-icon">💰</div>
+                    <div>
+                        <h3>Bendahara Umum OSIS</h3>
+                        <p>
+                            Bertanggung jawab membantu pengelolaan
+                            keuangan organisasi OSIS.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-icon">🎖️</div>
+                    <div>
+                        <h3>Anggota Ekstra Paskibra</h3>
+                        <p>
+                            Mengembangkan kedisiplinan, tanggung jawab,
+                            dan kerja sama.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-icon">👥</div>
+                    <div>
+                        <h3>Pengurus Kelas</h3>
+                        <p>
+                            Membantu koordinasi kegiatan dan komunikasi
+                            di kelas.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="container">
+            <h2 class="section-title">Get In Touch</h2>
+
+            <div class="contact-card">
+                <p>
+                    Contact me through these platforms.
+                </p>
+
+                <div class="contact-links">
+
+                    <a href="mailto:vinaulyah258@gmail.com">
+                        ✉️ Email
+                    </a>
+
+                    <a
+                        href="https://github.com/26050974003-lgtm/portofolio-vina"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        🐙 GitHub
+                    </a>
+
+                    <a
+                        href="https://linkedin.com/in/vina-ulyah-a53253441/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        💼 LinkedIn
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/vinaulyah_/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        📸 Instagram
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
-        <p>&copy; 2026 Vina Hidayatul Ulyah. All rights reserved.</p>
+        <p>© 2026 Vina Hidayatul Ulyah. Made with 💗</p>
     </footer>
 
 </body>
